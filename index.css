@@ -1,0 +1,184 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: bold;
+}
+.navbar-brand {
+    font-size: 220%;
+    font-weight: bold;
+    margin-left: 350px;
+ /* color: #ffeb3b; */
+}
+.custom-navbar{
+    /* background-color: gainsboro !important; */
+    color: white !important;
+  
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    font-size: larger;
+}
+.navbar-nav {
+    gap: 20px;
+  
+}
+.navbar-nav .nav-link:hover {
+    color: #ffeb3b !important; /* Yellow on Hover */
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+.navbar{
+    color: C599B6;
+    background-color: darkblue;
+}
+.hero {
+     background: url('imgs/towfiqu-barbhuiya--9gPKrsbGmc-unsplash.jpg') no-repeat center center/cover; 
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 90px;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.hero .btn {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    background: #ffeb3b;
+    color: #002147;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hero .btn:hover {
+    background: #ffd700;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+}
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(10vw); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Move to original position */
+        opacity: 1;
+    }
+}
+
+.animated-services {
+    display: block;
+    text-align: center; /* Ensure it's centered */
+    animation: slideInFromRight 1s ease-in-out forwards;
+    opacity: 0; /* Initially hidden */
+}
+
+
+
+
+.row{
+    margin: 30px;
+}
+
+.animated-services {
+    animation: slideInFromRight 1s ease-in-out 0.5s forwards; /* 0.5s delay */
+    opacity: 0;
+}
+
+
+/* Add this to your stylesheet */
+.animated-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-card:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+.animated-heading {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-card {
+    perspective: 1000px; /* Required for 3D effect */
+}
+
+.animated-card .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.animated-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.animated-card .card-front, .animated-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.animated-card .card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa; /* Add a background color for the back */
+    padding: 20px;
+}
