@@ -3,7 +3,7 @@ body {
 }
 
 .card {
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 
 .card:hover {
