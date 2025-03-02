@@ -28,7 +28,7 @@ body {
     height: 50px;  /* ضبط الحجم */
     width: auto;
     max-width: 100%;
-    margin-left: 15px; 
+    margin-left: 20px; 
 }
 .navbar-brand {
     display: flex;
